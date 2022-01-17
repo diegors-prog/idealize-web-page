@@ -1,0 +1,678 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap");
+/* line 3, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+:root {
+  --red: #ed1b24;
+  --black-bg: #000000;
+  --gray-color: #666;
+  --light-color: #eee;
+  --white: #ffff;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  --font-family-title: 'Roboto', sans-serif;
+  --font-family-text: 'Poppins', sans-serif;
+}
+
+/* line 15, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+* {
+  font-family: 'Roboto', 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+/* line 63, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+/* line 69, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* line 73, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* line 77, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+html::-webkit-scrollbar-thumb {
+  background: var(--red);
+}
+
+/* line 82, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+section {
+  padding: 5rem 10%;
+}
+
+/* line 86, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.heading {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  color: --black-bg;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+  padding-left: 1rem;
+  border-left: 1rem solid var(--red);
+}
+
+/* line 93, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  background: var(--red);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  transition: 0.2s linear;
+}
+
+/* line 105, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.btn:hover {
+  background: var(--black-bg);
+  color: var(--light-color);
+}
+
+@keyframes fadeIn {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+}
+
+/* line 118, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: var(--box-shadow);
+  padding: 1.5rem 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--black-bg);
+  z-index: 1000;
+}
+
+/* line 131, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.header .navbar a {
+  font-size: 2rem;
+  color: --light-color;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+  margin: 0 1rem;
+  color: var(--light-color);
+}
+
+/* line 136, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.header .navbar a:hover {
+  color: var(--red);
+}
+
+/* line 141, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.header .icons div {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--light-color);
+  color: var(--black-bg);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 0.3rem;
+}
+
+/* line 57, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.header .icons div:hover {
+  background: var(--gray-color);
+  color: var(--light-color);
+}
+
+/* line 146, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.header #menu-btn {
+  display: none;
+}
+
+/* line 151, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35rem;
+  background: var(--black-bg);
+  height: 100%;
+  text-align: center;
+  z-index: 1100;
+  padding: 0 2rem;
+  padding-top: 5rem;
+  display: none;
+}
+
+/* line 164, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info.active {
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+  display: block;
+}
+
+/* line 169, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info #close-contact-info {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  font-size: 4rem;
+  color: var(--light-color);
+}
+
+/* line 177, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info #close-contact-info:hover {
+  transform: rotate(90deg);
+}
+
+/* line 182, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info .info {
+  padding: 2rem 0;
+}
+
+/* line 185, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info .info i {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--light-color);
+  color: var(--black-bg);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+/* line 57, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info .info i:hover {
+  background: var(--gray-color);
+  color: var(--light-color);
+}
+
+/* line 190, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info .info h3 {
+  font-size: 2rem;
+  color: --light-color;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+
+/* line 196, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info .info p {
+  font-size: 1.5rem;
+  color: var(--black-bg);
+  line-height: 1.6;
+  font-family: var(--font-family-text);
+  color: var(--light-color);
+}
+
+/* line 202, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info .share {
+  padding-top: 1rem;
+  border-top: var(--border);
+  border-color: var(--light-color);
+  margin-top: 1rem;
+}
+
+/* line 208, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--light-color);
+  color: var(--black-bg);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 0.3rem;
+}
+
+/* line 57, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact-info .share a:hover {
+  background: var(--gray-color);
+  color: var(--light-color);
+}
+
+/* line 215, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home {
+  padding: 0;
+}
+
+/* line 218, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .slide {
+  min-height: 60rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* line 226, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--white), transparent);
+}
+
+/* line 236, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .slide .content {
+  width: 50rem;
+  position: relative;
+}
+
+/* line 240, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .slide .content h3 {
+  font-size: 6rem;
+  color: --black-bg;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+  text-transform: uppercase;
+}
+
+/* line 245, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .slide .content p {
+  font-size: 1.4rem;
+  color: var(--black-bg);
+  line-height: 1.6;
+  font-family: var(--font-family-text);
+  padding: 1rem 0;
+}
+
+/* line 252, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .swiper-button-next,
+.home .swiper-button-prev {
+  top: initial;
+  bottom: 0;
+  left: initial;
+  right: 0;
+  height: 7rem;
+  width: 7rem;
+  line-height: 7rem;
+  font-size: 3rem;
+  background: var(--white);
+}
+
+/* line 264, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover {
+  background: var(--red);
+}
+
+/* line 269, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after {
+  font-size: 2rem;
+  color: var(--black-bg);
+}
+
+/* line 275, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.home .swiper-button-prev {
+  right: 7rem;
+}
+
+/* line 281, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+/* line 288, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .about-img {
+  flex: 1 1 41rem;
+}
+
+/* line 291, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .about-img img {
+  width: 100%;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.35);
+}
+
+/* line 297, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .content {
+  flex: 1 1 41rem;
+}
+
+/* line 300, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .content h3 {
+  font-size: 3.5rem;
+  color: --black-bg;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+}
+
+/* line 304, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .content p {
+  font-size: 1.5rem;
+  color: var(--black-bg);
+  line-height: 1.6;
+  font-family: var(--font-family-text);
+  padding: 1rem 0;
+}
+
+/* line 310, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .box-container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+/* line 315, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .box-container .box {
+  text-align: center;
+  background: var(--light-color);
+  padding: 3rem 2rem;
+}
+
+/* line 320, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .box-container .box h3 {
+  font-size: 4rem;
+  color: --black-bg;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+}
+
+/* line 324, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.about .box-container .box p {
+  font-size: 1.5rem;
+  color: var(--black-bg);
+  line-height: 1.6;
+  font-family: var(--font-family-text);
+  padding-top: 0.5rem;
+}
+
+/* line 332, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.services {
+  background: var(--light-color);
+}
+
+/* line 335, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+
+/* line 338, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.services .box-container .box {
+  text-align: center;
+  padding: 3rem;
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
+
+/* line 345, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.services .box-container .box i {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--light-color);
+  color: var(--black-bg);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+/* line 57, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.services .box-container .box i:hover {
+  background: var(--gray-color);
+  color: var(--light-color);
+}
+
+/* line 350, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.services .box-container .box h3 {
+  font-size: 2rem;
+  color: --black-bg;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+  padding: 1rem 0;
+}
+
+/* line 355, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.services .box-container .box p {
+  font-size: 1.5rem;
+  color: var(--black-bg);
+  line-height: 1.6;
+  font-family: var(--font-family-text);
+}
+
+/* line 362, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects {
+  background: var(--black-bg);
+}
+
+/* line 365, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .heading {
+  color: var(--light-color);
+}
+
+/* line 368, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+/* line 372, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box {
+  cursor: initial;
+}
+
+/* line 375, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box:hover .image img {
+  transform: scale(1.1);
+}
+
+/* line 379, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box .image {
+  height: 40rem;
+  overflow: hidden;
+}
+
+/* line 383, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+
+/* line 391, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box .content {
+  display: flex;
+  justify-content: space-between;
+  background: var(--white);
+}
+
+/* line 396, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box .content .info {
+  padding: 1rem 2rem;
+}
+
+/* line 399, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box .content .info h3 {
+  font-size: 1.7rem;
+  color: --black-bg;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+  color: var(--black-bg);
+}
+
+/* line 404, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box .content .info p {
+  font-size: 1.5rem;
+  color: var(--black-bg);
+  line-height: 1.6;
+  font-family: var(--font-family-text);
+}
+
+/* line 409, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.projects .box .content i {
+  width: 7.7rem;
+  font-size: 3rem;
+  background: var(--red);
+  color: var(--white);
+  cursor: pointer;
+  text-align: center;
+  line-height: 7.5rem;
+}
+
+/* line 423, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* line 428, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact .row .map {
+  flex: 1 1 41rem;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+}
+
+/* line 434, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact .row form {
+  flex: 1 1 41rem;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+/* line 439, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact .row form h3 {
+  font-size: 2.5rem;
+  color: --black-bg;
+  text-transform: capitalize;
+  font-family: var(--font-family-title);
+}
+
+/* line 443, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact .row form .box {
+  margin: 0.7rem 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  border-bottom: 0.1rem solid var(--gray-color);
+  font-size: 1.6rem;
+}
+
+/* line 450, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact .row form .box:focus {
+  border-color: var(--red);
+}
+
+/* line 455, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+}
+
+@media (max-width: 1400px) {
+  /* line 466, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* line 472, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  /* line 476, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  section {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 991px) {
+  /* line 482, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  html {
+    font-size: 55%;
+  }
+  /* line 486, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  section {
+    padding: 3rem 2rem;
+  }
+  /* line 491, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  .header #menu-btn {
+    display: inline-block;
+  }
+  /* line 495, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var();
+    border-top: var(--border);
+    border-bottom: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
+  }
+  /* line 506, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  /* line 510, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  .header .navbar a {
+    display: block;
+    margin: 1.4rem;
+    color: var(--black-bg);
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  /* line 521, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  .home .slide {
+    justify-content: center;
+  }
+  /* line 524, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  .home .slide .content {
+    text-align: center;
+  }
+  /* line 527, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  .home .slide .content h3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  /* line 535, ../../../../DOCUMENTOS/idealize-impressoes/scss/style.scss */
+  html {
+    font-size: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
